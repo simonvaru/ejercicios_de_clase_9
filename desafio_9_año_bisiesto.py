@@ -1,29 +1,33 @@
+def funcion4(y):
+    global z
+    if y == 0 or y % 4 != 0:
+        z = "no es bisiesto"     
+    elif y % 4 == 0:
+        z = "es bisiesto"
+
+
 def año_bisiesto(x):
     if x >= 100:
         if x >= 400:
             if x % 400 == 0:
                 return("es bisiesto")
             elif x % 100 != 0 :
-                    if x % 4 == 0:
-                        return("es bisiesto")
-                    elif x % 4 != 0:
-                        return("no es bisiesto")
+                funcion4(x)
+                return z
             else:
                  return("no es bisiesto")       
         else:
             if x % 100 != 0 : 
-                if x % 4 == 0:
-                        return("es bisiesto")   
+                funcion4(x)
+                return z
             else:
-                 return("no es bisiesto")      
-    elif x % 4 == 0:
-        return("es bisiesto")
-    elif x % 4 != 0:
-        return("no es bisiesto")
+                return("no es bisiesto")      
+    
     else:
-        return("no corresponde a numero valido")    
-    
-    
-print("Ingresar año: ")
-año = int(input())
+        funcion4(x)
+        return z
+        
+ 
+
+año = int(input("Ingresar año: "))
 print(f"El año {año} {año_bisiesto(año)}.")
