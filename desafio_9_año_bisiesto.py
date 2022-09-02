@@ -28,6 +28,11 @@ def año_bisiesto(x):
         return z
         
  
-
-año = int(input("Ingresar año: "))
-print(f"El año {año} {año_bisiesto(año)}.")
+while True:
+    try:
+        año = int(input("Ingresar año: "))
+        print(f"El año {año} {año_bisiesto(año)}.")
+        break
+    except:
+        print("Valor ingresado incorrecto.")
+        
