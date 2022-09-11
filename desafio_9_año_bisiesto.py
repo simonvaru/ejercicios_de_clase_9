@@ -1,23 +1,27 @@
 def funcion4(y):
     global z
-    if y == 0 or y % 4 != 0:
+    condicion_1 = 4
+    condicion_2 = 0
+    if y == condicion_2 or y % condicion_1 != condicion_2:
         z = "no es bisiesto"     
-    elif y % 4 == 0:
+    elif y % condicion_1 == condicion_2:
         z = "es bisiesto"
 
 
 def año_bisiesto(x):
-    if x >= 100:
-        if x >= 400:
-            if x % 400 == 0:
+    condicion_1 = 400
+    condicion_2 = 100
+    if x >= condicion_2:
+        if x >= condicion_1:
+            if x % condicion_1 == 0:
                 return("es bisiesto")
-            elif x % 100 != 0 :
+            elif x % condicion_2 != 0 :
                 funcion4(x)
                 return z
             else:
                  return("no es bisiesto")       
         else:
-            if x % 100 != 0 : 
+            if x % condicion_2 != 0 : 
                 funcion4(x)
                 return z
             else:
